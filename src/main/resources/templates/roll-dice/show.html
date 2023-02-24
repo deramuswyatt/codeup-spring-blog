@@ -1,0 +1,14 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="partials :: head ('Roll-a-Die')">
+</head>
+<body class="main-container main-bg">
+<nav th:replace="partials :: navbar"></nav>
+<main class="container">
+  <h1>User guessed <span th:text="${number}"></span>. The die landed on <span th:text="${result}"></span>.</h1>
+  <h1 th:if="${number != result}">You lose...</h1>
+  <h1 th:if="${number == result}">You win!!!</h1>
+</main>
+<footer th:replace="partials :: footer"></footer>
+<div th:replace="partials :: boot-scripts"></div>
+</body>
+</html>

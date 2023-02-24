@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="partials :: head ('Viewing an Ad')">
+  <title>Prolonged Fart Noises</title>
+</head>
+<body class="main-bg main-container">
+<nav th:replace="partials :: navbar"></nav>
+<main class="container">
+  <h1 th:text="${ad.title}"></h1>
+  <h2>By: <span th:text="${ad.userId}"></span></h2>
+  <p th:text="${ad.description}"></p>
+
+  <div th:if="${userIsCreator}">
+    <button class="btn footer-bg">Edit Ad</button>
+    <button class="btn nav-bg">Delete Ad</button>
+  </div>
+</main>
+<footer th:replace="partials :: footer"></footer>
+<div th:replace="partials :: boot-scripts"></div>
+</body>
+</html>

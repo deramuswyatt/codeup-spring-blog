@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="partials :: head ('Welcome to Bloglandia!')">
+</head>
+<body class="main-container main-bg">
+<nav th:replace="partials :: navbar"></nav>
+<main class="container">
+    <h1>Welcome to <span class="logo-font">Bloglandia</span></h1>
+    <h2>A land of blogs, dreams, and magic!</h2>
+</main>
+<footer th:replace="partials :: footer"></footer>
+<div th:replace="partials :: boot-scripts"></div>
+</body>
+</html>
